@@ -1,0 +1,33 @@
+<div class="container my-5">
+  <div class="float-left">
+    <h2>Products Summary</h2>
+  </div>
+
+  <button class="btn btn-danger float-right my-3 ml-3" (click)="logout()">
+    Logout
+  </button>
+
+
+  <div>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Product Id</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Brand Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Purchase Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <th scope="row">{{ product?._id }}</th>
+          <td>{{ product?.name }}</td>
+          <td>{{ product?.brand }}</td>
+          <td>{{ product?.price }}</td>
+          <td>{{ product?.purchaseDate }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
